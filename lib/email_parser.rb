@@ -7,6 +7,8 @@ class EmailAddressParser
     def initialize(emails)
        @email_string = emails
     end
+    
+    attr_accessor :email_string
 
     def parse
         @parsed_string = @email_string.split(/[\s,]/)
