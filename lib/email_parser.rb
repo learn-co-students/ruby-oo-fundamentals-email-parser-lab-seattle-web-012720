@@ -14,8 +14,7 @@ class EmailAddressParser
  
     def parse 
         @parsed_string = @email_addresses.split(/[\s,]/)
-        @noEmptyStrings = @parsed_string.reject { |s| s.empty?}
-        @uniqueEmails = @noEmptyStrings.uniq
+        @noEmptyorRepeatStrings = @parsed_string.reject { |s| s.empty?}.uniq
 
     end 
    
